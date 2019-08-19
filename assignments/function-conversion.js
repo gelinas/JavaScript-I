@@ -34,19 +34,19 @@ console.log(subtract(1,2));
 
 // Stretch
 
-// exampleArray = [1,2,3,4];
-// const triple = exampleArray.map(function (num) {
-//   return num * 3;
-// });
-// console.log(triple);
+exampleArray = [1,2,3,4];
+const triple = exampleArray.map(function (num) {
+  return num * 3;
+});
+console.log(triple);
 
 // // function expression syntax
 // // const add = function(a,b) { 
 // //  return a + b;
 // // } 
 
-// // arrow function expression syntax
-// const add = (a,b) => { 
-//     return a + b;
-//    } 
-//    console.log(add(2,4)) // 6 
+// arrow function expression syntax
+const add2 = (a,b) => { 
+    return a + b;
+   } 
+   console.log(add2(2,4)) // 6 

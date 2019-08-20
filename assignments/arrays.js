@@ -93,12 +93,12 @@ let carModels = [];
 for (let i = 0; i < inventory.length; i++) {
   carModels.push(inventory[i].car_model);   
 }
-let carModelsSorted = carModels.sort();
-console.log(carModelsSorted);
+carModels.sort();
+console.log(carModels);
 
 // method version
 
-const modelSort = inventory.map((car) => car.car_model);
+let modelSort = inventory.map((car) => car.car_model);
 
 console.log(modelSort.sort());
 
@@ -109,12 +109,12 @@ let carYears = [];
 for (let i = 0; i < inventory.length; i++) {
   carYears.push(inventory[i].car_year);   
 }
-let carYearsIsSorted = carYears.sort();
-console.log(carYearsIsSorted);
+carYears.sort();
+console.log(carYears);
 
 // method version
 
-const methodCarYears = inventory.map((car) => car.car_year);
+let methodCarYears = inventory.map((car) => car.car_year);
 
 console.log(methodCarYears.sort());
 
@@ -129,7 +129,7 @@ console.log(oldCars.length);
 
 // method version
 
-const methodOldCars = methodCarYears.filter(year => year < 2000);
+let methodOldCars = methodCarYears.filter(year => year < 2000);
 
 console.log(methodOldCars.length);
 
@@ -139,7 +139,9 @@ console.log(methodOldCars.length);
 
 let BMWAndAudi = [];
 for (let i = 0; i < inventory.length; i++) {
-  if (inventory[i].car_make ===  "BMW" | inventory[i].car_make === 'Audi') {BMWAndAudi.push(inventory[i]); }  
+  if (inventory[i].car_make ===  "BMW" || inventory[i].car_make === 'Audi') {
+    BMWAndAudi.push(inventory[i]);
+  }  
 }
 
 console.log(JSON.stringify(BMWAndAudi));
@@ -147,7 +149,7 @@ console.log(JSON.stringify(BMWAndAudi));
 //method version
 
 const methodBMWAndAudi = inventory.filter((car) => {
-  return car.car_make === "BMW" | car.car_make === "Audi"
+  return car.car_make === "BMW" || car.car_make === "Audi"
 });
 
 console.log(JSON.stringify(methodBMWAndAudi));
